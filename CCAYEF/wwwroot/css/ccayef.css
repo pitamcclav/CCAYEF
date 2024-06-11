@@ -1,1 +1,49 @@
-﻿
+﻿.container-fluid{
+    padding:0;
+    margin:0;
+    width:100%;
+}
+.navbar{
+    position:absolute;
+    width:100%;
+}
+.navbar .navbar-brand{
+    font-weight:500;
+    font-size:30px;
+    padding:10px;
+    margin-left:5px;
+}
+.navbar-nav .nav-link {
+    transition: transform 0.3s;
+    color:white;
+}
+.navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+.navbar-nav .nav-link:hover {
+    transform: scale(1.1);
+    color: var(--primary);
+}
+.hero{
+    background-image:url('../images/breadcrumbs.jpg');
+    color:white;
+    height:100vh;
+    width:100%;
+    background-size:cover;
+
+}
+.breadcrumbs{
+    background-image:url('../images/breadcrumbs.jpg');
+    background-size:cover;
+    min-height:60vh;
+}
+.row{
+    padding:20px;
+    margin:0;
+}
+.card-body img{
+    object-fit:cover;
+    width:100%;
+    padding:10px;
+}

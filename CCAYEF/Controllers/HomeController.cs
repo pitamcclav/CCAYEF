@@ -37,7 +37,14 @@ namespace CCAYEF.Controllers
         {
             return View();
         }
-
+        public IActionResult Media()
+        {
+            return View();
+        }
+        public IActionResult Publications()
+        {
+            return View();
+        }
         
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

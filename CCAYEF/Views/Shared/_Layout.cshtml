@@ -3,15 +3,16 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - CCAYEF</title>
+    <title>@ViewData["Title"]</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-     <link rel="stylesheet" href="~/CCAYEF.styles.css" asp-append-version="true" />
+     @* <link rel="stylesheet" href="~/CCAYEF.styles.css" asp-append-version="true" /> *@
     <link href="~/css/ccayef.css" asp-append-version="true" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-
+    <script src="https://kit.fontawesome.com/1cf6fd3c89.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -38,6 +39,12 @@
                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Projects">Projects</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Media">Media</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Publications">Publications</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>
                         </li>
                     </ul>
@@ -46,19 +53,50 @@
         </nav>
     </header>
     <div class="container-fluid">
-        <main role="main" class="pb-3">
+        <main role="main">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="footer text-muted">
         <div class="container">
-            &copy; 2024 - CCAYEF - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <div class="row">
+                <!-- Contact Information -->
+                <div class="col-md-4 contact-info">
+                    <h4>Contact Us</h4>
+                    <p>Email: info@ccayef.org</p>
+                    <p>Phone: +1 234 567 890</p>
+                    <p>Address: 123 Main Street, Anytown, USA</p>
+                </div>
+                <!-- Social Links -->
+                <div class="col-md-4 social-links">
+                    <h4>Follow Us</h4>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <!-- Additional Links -->
+                <div class="col-md-4 additional-links">
+                    <h4>Quick Links</h4>
+                    <a href="#">About Us</a><br>
+                    <a href="#">Volunteer</a><br>
+                    <a href="#">Donate</a><br>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col text-center">
+                    &copy; 2024 - CCAYEF - <a href="#">Privacy</a>
+                </div>
+            </div>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

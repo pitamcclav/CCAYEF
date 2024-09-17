@@ -7,12 +7,24 @@
     <div class="carousel-inner">
         <div class="carousel-item hero-item active">
             <img src="~/images/bg_1.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Empowering Communities</h5>
+                <p>Join us in making a difference in people's lives.</p>
+            </div>
         </div>
         <div class="carousel-item hero-item">
             <img src="~/images/bg_2.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Volunteer Opportunities</h5>
+                <p>Give back to your community and help those in need.</p>
+            </div>
         </div>
         <div class="carousel-item hero-item">
             <img src="~/images/bg_3.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Support Our Mission</h5>
+                <p>Your donations can change lives.</p>
+            </div>
         </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
@@ -25,12 +37,13 @@
     </button>
 </div>
 
+
 <!-- Volunteer Section -->
-<section class="volunteer-section" >
+<section class="volunteer-section">
     <div class="container">
         <div class="section-header" data-aos="fade-up">
             <h3>Volunteer With Us</h3>
-            <p>Volunteering with us is a great way to give back to the community. We have a number of programs that you can volunteer for. You can volunteer for a day, a week, a month or even a year.</p>
+            <p>Volunteering with us is a great way to give back to the community. We have a number of programs that you can volunteer for.</p>
         </div>
         <div class="volunteer" data-aos="fade-up">
             <div class="row">
@@ -38,26 +51,29 @@
                     <img src="~/images/image_3.jpg" alt="volunteer" class="img-fluid">
                 </div>
                 <div class="col-lg-6">
-                    <form>
+                    <form id="volunteerForm">
                         <div class="mb-3">
                             <label for="volunteer-email" class="form-label">Volunteer Email</label>
-                            <input type="email" class="form-control" id="volunteer-email">
+                            <input type="email" class="form-control" id="volunteer-email" required>
                         </div>
                         <div class="mb-3">
                             <label for="volunteer-name" class="form-label">Volunteer Name</label>
-                            <input type="text" class="form-control" id="volunteer-name">
+                            <input type="text" class="form-control" id="volunteer-name" required>
                         </div>
                         <div class="mb-3">
                             <label for="message" class="form-label">Message</label>
-                            <textarea class="form-control" id="message" rows="3"></textarea>
+                            <textarea class="form-control" id="message" rows="3" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-sm btn-primary">Submit</button>
+                        <div id="success-message" class="mt-2" style="display:none;">Thank you for your submission!</div>
                     </form>
                 </div>
             </div>
         </div>
-    </div> 
+    </div>
 </section>
+
+
 
 <!-- What We Do Section -->
 <section class="what-we-do">
@@ -68,7 +84,7 @@
         </div>
         <div class="row" data-aos="fade-up">
             <div class="col-lg-6">
-                <div class="card">
+                <div class="card what-we-do-card">
                     <img src="~/images/causes-1.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Early Childhood Development</h5>
@@ -78,7 +94,7 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="card">
+                <div class="card what-we-do-card">
                     <img src="~/images/causes-2.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Vocational Skills Training</h5>
@@ -88,30 +104,15 @@
                 </div>
             </div>
         </div>
-        <div class="row" data-aos="fade-up">
-            <div class="col-lg-6">
-                <div class="card">
-                    <img src="~/images/causes-3.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Teenage Mother Rehabilitation</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Learn More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="card">
-                    <img src="~/images/causes-4.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Adolescent Health</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Learn More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </section>
+
+<style>
+    .what-we-do-card:hover {
+        transform: scale(1.05);
+        transition: all 0.3s ease;
+    }
+</style>
 
 <!-- Donate Section -->
 <section class="donate-section">

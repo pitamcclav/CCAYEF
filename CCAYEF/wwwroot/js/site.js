@@ -1,7 +1,5 @@
-﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿// Write your JavaScript code.
 
-// Write your JavaScript code.
 document.addEventListener('DOMContentLoaded', () => {
     "use strict";
     function updateNavLink() {
@@ -14,6 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         )
     }
+    $('.carousel').carousel({
+        pause: false
+    });
+
     updateNavLink();
     function aos_init() {
         AOS.init({
@@ -26,6 +28,61 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('load', () => {
         aos_init();
     });
+
+    function swipper() {
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+            slidesPerView: 3, // Number of images visible per view
+            spaceBetween: 30, // Space between slides
+           
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+                clicable: 'true',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false, // Autoplay continues after user interaction
+            },
+
+            breakpoints: {
+                1024: { slidesPerView: 3 }, // For large devices
+                768: { slidesPerView: 2 },  // For tablets
+                576: { slidesPerView: 1 },  // For mobile phones
+                344: { slidesPerView: 1 },
+            },
+
+            lazy: {
+                loadOnTransitionStart: true,
+                loadPrevNext: true,
+            },
+
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+    }
+
+    window.addEventListener('load', () => {
+        swipper();
+    });
+
+    
+   
+
+
+
 
 });
     

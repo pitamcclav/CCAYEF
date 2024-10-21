@@ -1,42 +1,54 @@
-﻿@{
+﻿   @{
     ViewData["Title"] = "Home Page";
 }
 
 <!-- Hero Section Carousel -->
-<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item hero-item active">
-            <img src="~/images/bg_1.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Empowering Communities</h5>
-                <p>Join us in making a difference in people's lives.</p>
-            </div>
-        </div>
-        <div class="carousel-item hero-item">
-            <img src="~/images/bg_2.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Volunteer Opportunities</h5>
-                <p>Give back to your community and help those in need.</p>
-            </div>
-        </div>
-        <div class="carousel-item hero-item">
-            <img src="~/images/bg_3.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Support Our Mission</h5>
-                <p>Your donations can change lives.</p>
-            </div>
-        </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
-</div>
 
+<section id="hero" class="hero-section">
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="welcome" data-aos="fade-down" data-aos-duration="1000">
+                <h1>Welcome to CCAYEF</h1>
+            </div>
+            <div class="carousel-item hero-item active">
+                <img src="~/images/Learning visit for students of Wisconcin_USA at CCAYEF.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption">
+                    <h5> Communities Involved</h5>
+                    <p>Join us in make a difference in people's lives.</p>
+                </div>
+            </div>
+            <div class="overlay"></div>
+
+            <div class="carousel-item hero-item">
+                <img src="~/images/mhm demo.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption ">
+                    <h5>Volunteer Opportunities</h5>
+                    <p>Give back to your community and help those in need.</p>
+                </div>
+            </div>
+            <div class="overlay"></div>
+
+            <div class="carousel-item hero-item">
+                <img src="~/images/DWSCC Meeting in Buikwe.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption ">
+                    <h5>Support Our Mission</h5>
+                    <p>Your donations can change lives.</p>
+                </div>
+            </div>
+            <div class="overlay"></div>
+        </div>
+        <!-- Carousel controls -->
+        <button class="carousel-control-prev upper-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next upper-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>
+ 
 
 <!-- Volunteer Section -->
 <section class="volunteer-section">
@@ -48,7 +60,7 @@
         <div class="volunteer" data-aos="fade-up">
             <div class="row">
                 <div class="col-lg-6">
-                    <img src="~/images/image_3.jpg" alt="volunteer" class="img-fluid">
+                    <img src="~/images/Group hand washing facility at Kangulumira CU.jpg" alt="volunteer" class="img-fluid">
                 </div>
                 <div class="col-lg-6">
                     <form id="volunteerForm">
@@ -76,51 +88,113 @@
 
 
 <!-- What We Do Section -->
-<section class="what-we-do">
+<section class="what-we-do sec-one">
     <div class="container">
         <div class="section-header" data-aos="fade-up">
             <h3>What We Do</h3>
             <p>Our services are designed to help you achieve your goals</p>
         </div>
-        <div class="row" data-aos="fade-up">
-            <div class="col-lg-6">
-                <div class="card what-we-do-card">
-                    <img src="~/images/causes-1.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Early Childhood Development</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Learn More</a>
+        <div>
+            <div class="row">
+                <div class="col-lg-6 what-we-do-img" >
+                    <img src="~/images/adol2.jpg" alt="Alternate Text" />
+                </div>
+                <div class="col-lg-6" >
+                    <div data-aos="fade-up">
+                        <p class="card-text">
+                            CCAYEF is an NGO based in Uganda, in Africa. It was started in the early 2000s based in Mukono District.
+                            CCAYEF has grown to offer a wide range of services ranging from vocational training to early and post maternal care. CCAYEF seeks to
+                            improve the livelihood of teen mothers through vocational trainings, HIV sensitization and providing child care. The organization has
+                            also developed and widened its scope into fields of WASH and Sanitation promotion in the numerous projects it has carried out with
+                            different partners. Some of the Key Areas of Focus Include;
+
+                            <ul>
+                                <li>Early Childhood Development</li>
+                                <li>Vocational Skills Training</li>
+                                <li>Teenage Mother Rehabilitation</li>
+                                <li>Adolescent Health and Empowerment</li>
+                                <li>HIV Sensitization</li>
+                                <li>WASH and Climate Change</li>
+                            </ul>
+                        </p>
+                        <a href="@Url.Action("Services", "Home")" class="btn btn-primary">Learn More</a>
                     </div>
                 </div>
+
             </div>
-            <div class="col-lg-6">
-                <div class="card what-we-do-card">
-                    <img src="~/images/causes-2.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Vocational Skills Training</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Learn More</a>
-                    </div>
-                </div>
+            
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Partners Section-->
+
+<section class="our-partners">
+    <div class="section-header">
+        <h3>Our Partners</h3>
+        <p>Organizations that support our mission</p>
+    </div>
+    <div class="row" data-aos="fade-up">
+        <div class="col">
+            <a href="https://www.government.is/diplomatic-missions/embassy-of-iceland-in-kampala/">
+                <img src="~/images/embassy.svg" />
+            </a>
+        </div>
+        <div class="col">
+            <a href="https://www.girlsnotbrides.org/our-partnership/national-partnerships-coalitions/uganda/">
+                <img src="~/images/gnb.png" />
+            </a>
+        </div>
+        <div class="col" >
+            <a href="https://www.segalfamilyfoundation.org/">
+                <img style="background-color: green; padding: 10px" src="~/images/segal.svg" />
+            </a>
+        </div>
+        <div class="col">
+            <a href="https://ngoforum.or.ug/">
+                <img src="~/images/ngo-forum.png" />
+                </a>
+        </div>
+        <div class="col">
+            <a href="https://kayunga.go.ug/">
+                <img src="~/images/kayunga.png" />
+            </a>
+        </div>
+        
+        <div class="row" data-aos="fade-up">
+            <div class="col">
+                <a href="http://www.muwrp.org/">
+                    <img src="~/images/muwrp.png" />
+                </a>
+            </div>
+            <div class="col">
+                <a href="https://www.usaid.gov/">
+                    <img style="background-color:#000061; padding: 10px" src="~/images/usaid.svg" />
+                </a>
+            </div>
+            <div class="col">
+                <a href="https://whiteribbonalliance.org/?gclid=CjwKCAjwt7SWBhAnEiwAx8ZLaswpU2U_5ayEUbSXGzinKAvUVj5az9G9M0l0DGYtIv0XJYM3-jxWgxoCc5oQAvD_BwE">
+                    <img src="~/images/wra_logo.png" />
+                </a>
+            </div>
+            <div class="col">
+                <a href="https://mukono.go.ug/">
+                    <img src="~/images/mukono.png" />
+                </a>
             </div>
         </div>
     </div>
 </section>
 
-<style>
-    .what-we-do-card:hover {
-        transform: scale(1.05);
-        transition: all 0.3s ease;
-    }
-</style>
-
 <!-- Donate Section -->
-<section class="donate-section">
+<section class="donate-section sec-one">
     <div class="container">
         <div class="section-header" data-aos="fade-up">
             <h3>Donate</h3>
             <p>Help us make a difference in the lives of the less privileged</p>
-            
+
         </div>
         <div>
             <a href="#" class="btn btn-primary">Donate Now</a>
@@ -142,7 +216,7 @@
                         <div class="card text-center">
                             <div class="card-body d-flex align-items-center">
                                 <div class="image-container">
-                                    <img src="~/images/bg_1.jpg" alt="John Doe">
+                                    <img src="~/images/mybg2.jpg" alt="John Doe">
                                 </div>
 
                                 <div class="text-container">
@@ -160,7 +234,7 @@
                         <div class="card text-center">
                             <div class="card-body">
                                 <div class="image-container">
-                                    <img src="~/images/bg_2.jpg" alt="Jane Smith">
+                                    <img src="~/images/mybg1.jpg" alt="Jane Smith">
                                 </div>
 
                                 <div class="text-container">
@@ -178,7 +252,7 @@
                         <div class="card text-center">
                             <div class="card-body">
                                 <div class="image-container">
-                                    <img src="~/images/bg_3.jpg" alt="Emily Johnson">
+                                    <img src="~/images/mybg3.jpg" alt="Emily Johnson">
                                 </div>
 
                                 <div class="text-container">

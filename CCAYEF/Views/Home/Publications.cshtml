@@ -1,52 +1,11 @@
 ﻿@{
-    ViewData["Title"] = "Publications";
+    ViewData["Title"] = "Resources";
 }
+
+@model dynamic
+
 <div class="breadcrumbs">
 </div>
-<section class="sec-one">
-    <div class="container">
-        <div class="publications">
-            <div class="container">
-                <div class="section-header" data-aos="fade-up">
-                    <h3>Publications</h3>
-                </div>
-                <div class="row" data-aos="fade-up">
-                    <div class="col-lg-4">
-                        <div class="card">
-                            <img src="~/images/bg_1.jpg" alt="Publication 1" />
-                            <div class="card-body">
-                                <h4>Annual Report 2020</h4>
-                                <p>Our annual report highlights our achievements, challenges, and impact in 2020.</p>
-                                <a href="#" class="btn">Download</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="card">
-                            <img src="~/images/bg_1.jpg" alt="Publication 1" />
-                            <div class="card-body">
-                                <h4>Annual Report 2020</h4>
-                                <p>Our annual report highlights our achievements, challenges, and impact in 2020.</p>
-                                <a href="#" class="btn">Download</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="card">
-                            <img src="~/images/bg_1.jpg" alt="Publication 1" />
-                            <div class="card-body">
-                                <h4>Annual Report 2020</h4>
-                                <p>Our annual report highlights our achievements, challenges, and impact in 2020.</p>
-                                <a href="#" class="btn">Download</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
 <section>
     <div class="container">
         <div class="reports">
@@ -55,39 +14,52 @@
                     <h3>Reports</h3>
                 </div>
                 <div class="row" data-aos="fade-up">
-                    <div class="col-lg-4">
-                        <div class="card">
-                            <img src="~/images/bg_1.jpg" alt="Report 1" />
-                            <div class="card-body">
-                                <h4>Annual Report 2020</h4>
-                                <p>Our annual report highlights our achievements, challenges, and impact in 2020.</p>
-                                <a href="#" class="btn">Download</a>
+
+                    @foreach (var report in Model.Reports)
+                    {
+                        <div class="col-lg-4">
+                            <div class="card">
+                                 @* <img src="~/images/bg_1.jpg" alt="Report 1" /> *@
+                                <div class="card-body">
+                                    <h4>@report.Title</h4>
+                                    <p>@report.Description</p>
+                                    <a href="@report.Link" class="btn btn-primary">Download</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="card">
-                            <img src="~/images/bg_1.jpg" alt="Report 1" />
-                            <div class="card-body">
-                                <h4>Annual Report 2020</h4>
-                                <p>Our annual report highlights our achievements, challenges, and impact in 2020.</p>
-                                <a href="#" class="btn">Download</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="card">
-                            <img src="~/images/bg_1.jpg" alt="Report 1" />
-                            <div class="card-body">
-                                <h4>Annual Report 2020</h4>
-                                <p>Our annual report highlights our achievements, challenges, and impact in 2020.</p>
-                                <a href="#" class="btn">Download</a>
-                            </div>
-                        </div>
-                    </div>
+                    }
+
+                    
                 </div>
             </div>
         </div>
     </div>
 </section>
 
+<section class="sec-one">
+    <div class="container">
+        <div class="publications">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h3>Publications</h3>
+                </div>
+                <div class="row" data-aos="fade-up">
+                    @foreach (var publication in Model.Publications)
+                    {
+                        <div class="col-lg-4">
+                            <div class="card">
+                                @* <img src="~/images/bg_1.jpg" alt="Report 1" /> *@
+                                <div class="card-body">
+                                    <h4>@publication.Title</h4>
+                                    <p>@publication.Description</p>
+                                    <a href="@publication.Link" class="btn btn-primary">Download</a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

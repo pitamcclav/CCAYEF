@@ -1,0 +1,14 @@
+{
+  "name": "ccayef",
+  "version": "1.0.0",
+  "main": "site.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "swiper": "^11.1.14"
+  }
+}

@@ -9,123 +9,93 @@
     <title>@ViewData["Title"]</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-     @* <link rel="stylesheet" href="~/CCAYEF.styles.css" asp-append-version="true" /> *@
     <link href="~/css/ccayef.css" asp-append-version="true" rel="stylesheet" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="~/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/1cf6fd3c89.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-         @* <nav class="navbar navbar-expand-sm navbar-toggleable-sm mb-3">
-             <div class="container-fluid">
-                 <a class="navbar-brand text-light" asp-area="" asp-controller="Home" asp-action="Index">CCAYEF</a>
-                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                         aria-expanded="false" aria-label="Toggle navigation">
-                     <span class="navbar-toggler-icon"></span>
-                 </button>
-                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                     <ul class="navbar-nav flex-grow-1 justify-content-end">
-                         <li class="nav-item">
-                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                         </li>
-                         <li class="nav-item">
-                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="About">About Us</a>
-                         </li>
-                         <li class="nav-item">
-                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Services">Services</a>
-                         </li>
-                         <li class="nav-item">
-                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Projects">Projects</a>
-                         </li>
-                         <li class="nav-item">
-                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Media">Media</a>
-                         </li>
-                         <li class="nav-item">
-                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Publications">Publications</a>
-                         </li>
-                         <li class="nav-item">
-                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>
-                         </li>
-                     </ul>
-                 </div>
-             </div>
-         </nav> *@
-         <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="@Url.Action("Index", "Home")"><img class="navbar-img" src="~/images/logo.png"/>
-            CCAYEF</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
-                aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                         </li>
-                         <li class="nav-item">
-                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="About">About Us</a>
-                         </li>
-                         <li class="nav-item">
-                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Services">Services</a>
-                         </li>
-                         <li class="nav-item">
-                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Projects">Projects</a>
-                         </li>
-                         <li class="nav-item">
-                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Media">Media</a>
-                         </li>
-                         <li class="nav-item">
-                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Publications">Publications</a>
-                         </li>
-                         <li class="nav-item">
-                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>
-                         </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-    </header>
-    <div class="container-fluid">
-        <main role="main">
-            @RenderBody()
-        </main>
-    </div>
-
-    <footer class="footer text-muted">
-        <div class="container">
-            <div class="row">
-                <!-- Contact Information -->
-                <div class="col-md-4 contact-info">
-                    <h4>Contact Us</h4>
-                    <p>Email: info@ccayef.org</p>
-                    <p>Phone: +1 234 567 890</p>
-                    <p>Address: 123 Main Street, Anytown, USA</p>
-                </div>
-                <!-- Social Links -->
-                <div class="col-md-4 social-links">
-                    <h4>Follow Us</h4>
-                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                </div>
-                <!-- Additional Links -->
-                <div class="col-md-4 additional-links">
-                    <h4>Quick Links</h4>
-                    <a href="#">About Us</a><br>
-                    <a href="#">Volunteer</a><br>
-                    <a href="#">Donate</a><br>
-                    <a href="#">Privacy Policy</a>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="@Url.Action("Index", "Home")">
+                    <img class="navbar-img" src="~/images/logo.png" alt="CCAYEF Logo" />
+                    CCAYEF
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="About">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Projects">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Media">Media</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Publications">Resources</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="row mt-4">
+        </nav>
+    </header>
+
+    <main role="main">
+        @RenderBody()
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h4>Contact Us</h4>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-envelope me-2"></i> info@ccayef.org</li>
+                        <li><i class="fas fa-phone me-2"></i> +1 234 567 890</li>
+                        <li><i class="fas fa-map-marker-alt me-2"></i> 123 Main Street, Anytown, USA</li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h4>Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="@Url.Action("About","Home")">About Us</a></li>
+                        <li><a href="@Url.Action("Services","Home")">Services</a></li>
+                        <li><a href="@Url.Action("Projects","Home")">Projects</a></li>
+                        <li><a href="@Url.Action("Contact","Home")">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mt-4 mb-3">
+            <div class="row">
                 <div class="col text-center">
-                    &copy; 2024 - CCAYEF - <a href="#">Privacy</a>
+                    <p>&copy; 2024 CCAYEF | <a href="#">Privacy Policy</a></p>
                 </div>
             </div>
         </div>
@@ -133,8 +103,12 @@
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
